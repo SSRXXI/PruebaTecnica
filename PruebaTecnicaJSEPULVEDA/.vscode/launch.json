@@ -1,6 +1,33 @@
 {
     "version": "0.2.0",
+    "compounds": [
+        {
+            "name": "Debug Web Api Y React (Chrome)",
+            "configurations": [
+                "Launch Edge",
+                ".NET Core Launch (web)"
+            ],
+            "presentation": {
+                "hidden": false,
+                "group": "Debug",
+                "order": 1
+            }
+        }
+  
+    ],
     "configurations": [
+        {
+            "name": "Launch Edge",
+            "request": "launch",
+            "type": "pwa-msedge",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}/app-react",
+            "presentation": {
+                "hidden": true,
+                "group": "Debug",
+                "order": 1
+            }
+        },
         {
             // Use IntelliSense to find out which attributes exist for C# debugging
             // Use hover for the description of the existing attributes
@@ -31,5 +58,6 @@
             "type": "coreclr",
             "request": "attach"
         }
+       
     ]
 }
