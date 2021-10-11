@@ -12,7 +12,7 @@ export  function PerosnaItem({persona, deletePersona, actualizarPersona}) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const {id,run, nombre, email} = persona
+    const {id,run, nombre, email, telefono, direccion, observaciones} = persona
     return (
         <Fragment>
         <tr>
@@ -24,6 +24,15 @@ export  function PerosnaItem({persona, deletePersona, actualizarPersona}) {
            </td>
            <td>
                 {email}
+           </td>
+           <td>
+                {telefono}
+           </td>
+           <td>
+                {direccion}
+           </td>
+           <td>
+                {observaciones}
            </td>
            <td>
                <Button variant="danger" onClick={handleShow} >Eliminar</Button>

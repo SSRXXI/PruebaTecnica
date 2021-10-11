@@ -12,6 +12,9 @@ export function PersonaList({personas, deletePersona, actualizarPersona}) {
                     <th>Rut</th>
                     <th>Nombre</th>
                     <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                    <th>Observaciones</th>
                     </tr>
                 </thead>
                 <tbody>

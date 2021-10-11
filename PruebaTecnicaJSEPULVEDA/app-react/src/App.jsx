@@ -42,18 +42,7 @@ export function App() {
       
 
     }
-    const cargardatos = (persona) =>{
-        nombreInputActualizar.current.value = persona[0].nombre;
-        apellidoMInputActualizar.current.value  = persona[0].apellidoMaterno;
-        apellidoAInputActualizar.current.value  = persona[0].apellidoPaterno;
-        rutInputActualizar.current.value  = persona[0].run;
-        emailInputActualizar.current.value  =  persona[0].email;
-        telefonoInputActualizar.current.value  =  persona[0].telefono;
-        fechaNacInputActualizar.current.value  =  persona[0].fechaNacimiento;
-   
-        direccionInputActualizar.current.value  =  persona[0].direccion;
-        observacionesInputActualizar.current.value  =  persona[0].observaciones;
-    }
+
     const actualizarPersona = () => {
         const ciudad = selectCiudadActualizar.current.value;
         const ciudadCodigo = ciudadesData.filter(c => c.nombre+c.codigo === ciudad)
@@ -106,7 +95,7 @@ export function App() {
         setCodigoSexo(cx);
     };
 
-    const nombreInputActualizar = useRef('');
+    const nombreInputActualizar = useRef("Actualizar");
     const apellidoMInputActualizar = useRef();
     const apellidoAInputActualizar = useRef();
     const rutInputActualizar = useRef();
@@ -169,6 +158,8 @@ export function App() {
 
 
     const agregarPersona =  () => {
+        const cadenaRut = rutInput.current.value;
+        const arreglo = cadenaRut.split('-')
         const ciudad = selectCiudad.current.value;
         const ciudadCodigo = ciudadesData.filter(c => c.nombre+c.codigo === ciudad)
 
@@ -179,8 +170,8 @@ export function App() {
         const regionCodigo = regionesData.filter(c => c.codigo.toString() === region)
 
         const persona = {
-        runCuerpo: 0,
-        runDigito: "1",
+        runCuerpo: parseInt(arreglo[0]),
+        runDigito: arreglo[1],
        
         nombres: nombreInput.current.value,
         apellidoPaterno: apellidoAInput.current.value,
@@ -345,16 +336,16 @@ export function App() {
                 <Modal.Body>
                    <Form>
                     <Row className="mb-3">
-                        <Col xs={12} md={6}>
+                        <Col sm={12} >
                             <Form.Group className="mb-3">
-                                <Form.Control ref={rutInputActualizar} type="text" placeholder="RUT" />
+                                <Form.Control ref={rutInputActualizar} type="text" placeholder="RUT" value={!personaActualizar?null:personaActualizar.run}/>
                             </Form.Group>
 
                             <Form.Group className="mb-3">
                                 <Form.Control ref={apellidoAInputActualizar} type="text" placeholder="Apellido Paterno" />
                             </Form.Group>
                         </Col>
-                        <Col xs={12} md={6}>
+                        <Col sm={12} >
                             <Form.Group className="mb-3">
                                 <Form.Control ref={nombreInputActualizar} type="text" placeholder="Nombres" />
                             </Form.Group>
@@ -366,23 +357,23 @@ export function App() {
 
                     </Row>
                     <Row className="mb-3">
-                         <Col xs={12} md={3}>
+                         <Col sm={12} >
                             <label>Sexo</label>
                             <br/>
                              <SexoItem sexo={sexoData} sexoInput={sexoInputActualizar} />
                         </Col>
                     
-                        <Col xs={12} md={3}>
+                        <Col sm={12} >
                             <Form.Group className="mb-3">
                                 <Form.Control type="date" ref={fechaNacInputActualizar} />
                             </Form.Group>
                         </Col>
-                        <Col xs={12} md={3}>
+                        <Col sm={12} >
                             <Form.Group className="mb-3">
                                 <Form.Control ref={emailInputActualizar} type="text" placeholder="Email" />
                             </Form.Group>
                         </Col>
-                        <Col xs={12} md={3}>
+                        <Col sm={12} >
 
                             <Form.Group className="mb-3">
                                 <Form.Control ref={telefonoInputActualizar} type="text" placeholder="Telefono" />
@@ -390,22 +381,22 @@ export function App() {
                         </Col>
                     </Row>
                     <Row className="mb-3">
-                        <Col xs={12} md={3}>
+                        <Col sm={12} >
                             <Form.Select className="mb-3" onChange={filtraCiudadesYComunas} ref={selectRegionActualizar}>
                                 <RegionItem regiones={regiones} />
                             </Form.Select>
                         </Col>
-                        <Col xs={12} md={3}>
+                        <Col sm={12} >
                             <Form.Select className="mb-3" onChange={filtrarCoumnas} ref={selectCiudadActualizar}>
                                 <CiudadItem ciudades={ciudades} />
                             </Form.Select>
                         </Col>
-                        <Col xs={12} md={3}>
+                        <Col sm={12} >
                             <Form.Select className="mb-3" onChange={filtrarCiudadyRegion} ref={selectComunaActualizar}>
                                 <ComunaItem comunas={comunas} />
                             </Form.Select>
                         </Col>
-                        <Col xs={12} md={3}>
+                        <Col sm={12} >
                             <Form.Control className="mb-3" ref={direccionInputActualizar} type="text" placeholder="Direccion" />
                         </Col>
                     </Row>
