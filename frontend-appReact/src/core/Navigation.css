@@ -1,0 +1,13 @@
+.aprendeya-color {
+  background-color: #2E2727;
+}
+.morado {
+  color: #CA00DA;
+}
+.a {
+  color: #FFFFFF !important;
+}
+.a:hover{
+  color: #FF24DD !important;
+  transition: 0.3s;
+}

@@ -1,0 +1,158 @@
+
+/*------------------------------------
+- COLOR aprendeya
+------------------------------------*/
+
+$aprendeya_t1: #2f6406;
+$aprendeya_t2: #183303;
+$aprendeya_t3: #76f117;
+$aprendeya_t4: #84f22f;
+$aprendeya_t5: #000000;
+$aprendeya_t6: #112502;
+$aprendeya_t7: #1f4203;
+$aprendeya_t8: #000000;
+$aprendeya_t9: #8ff342;
+
+$aprendeya_shadow: rgba(47, 100, 6, 0.5);
+$aprendeya_text_color_dark_bright: #fff;
+
+
+.alert-aprendeya {
+  color: $aprendeya_t5;
+  background-color: $aprendeya_t9;
+  border-color: $aprendeya_t4;
+}
+
+.alert-aprendeya hr {
+  border-top-color: $aprendeya_t3;
+}
+
+.alert-aprendeya .alert-link {
+  color: $aprendeya_t8;
+}
+
+.badge-aprendeya {
+  color: $aprendeya_text_color_dark_bright;
+  background-color: $aprendeya_t1;
+}
+
+.badge-aprendeya[href]:hover, .badge-aprendeya[href]:focus {
+  color: $aprendeya_text_color_dark_bright;
+  background-color: $aprendeya_t2;
+}
+
+.bg-aprendeya {
+  background-color: $aprendeya_t1 !important;
+}
+
+a.bg-aprendeya:hover, a.bg-aprendeya:focus,
+button.bg-aprendeya:hover,
+button.bg-aprendeya:focus {
+  background-color: $aprendeya_t2 !important;
+}
+
+.border-aprendeya {
+  border-color: $aprendeya_t1 !important;
+}
+
+.btn-aprendeya {
+  color: $aprendeya_text_color_dark_bright;
+  background-color: $aprendeya_t1;
+  border-color: $aprendeya_t1;
+}
+
+.btn-aprendeya:hover {
+  color: $aprendeya_text_color_dark_bright;
+  background-color: $aprendeya_t7;
+  border-color: $aprendeya_t2;
+}
+
+.btn-aprendeya:focus, .btn-aprendeya.focus {
+  box-shadow: 0 0 0 0.2rem $aprendeya_shadow;
+}
+
+.btn-aprendeya.disabled, .btn-aprendeya:disabled {
+  color: $aprendeya_text_color_dark_bright;
+  background-color: $aprendeya_t1;
+  border-color: $aprendeya_t1;
+}
+
+.btn-aprendeya:not(:disabled):not(.disabled):active, .btn-aprendeya:not(:disabled):not(.disabled).active, .show > .btn-aprendeya.dropdown-toggle {
+  color: $aprendeya_text_color_dark_bright;
+  background-color: $aprendeya_t2;
+  border-color: $aprendeya_t6;
+}
+
+.btn-aprendeya:not(:disabled):not(.disabled):active:focus, .btn-aprendeya:not(:disabled):not(.disabled).active:focus, .show > .btn-aprendeya.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $aprendeya_shadow;
+}
+
+.btn-outline-aprendeya {
+  color: $aprendeya_t1;
+  background-color: transparent;
+  border-color: $aprendeya_t1;
+}
+
+.btn-outline-aprendeya:hover {
+  color: $aprendeya_text_color_dark_bright;
+  background-color: $aprendeya_t1;
+  border-color: $aprendeya_t1;
+}
+
+.btn-outline-aprendeya:focus, .btn-outline-aprendeya.focus {
+  box-shadow: 0 0 0 0.2rem $aprendeya_shadow;
+}
+
+.btn-outline-aprendeya.disabled, .btn-outline-aprendeya:disabled {
+  color: $aprendeya_t1;
+  background-color: transparent;
+}
+
+.btn-outline-aprendeya:not(:disabled):not(.disabled):active, .btn-outline-aprendeya:not(:disabled):not(.disabled).active, .show > .btn-outline-aprendeya.dropdown-toggle {
+  color: $aprendeya_text_color_dark_bright;
+  background-color: $aprendeya_t1;
+  border-color: $aprendeya_t1;
+}
+
+.btn-outline-aprendeya:not(:disabled):not(.disabled):active:focus, .btn-outline-aprendeya:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-aprendeya.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $aprendeya_shadow;
+}
+
+.list-group-item-aprendeya {
+  color: $aprendeya_t5;
+  background-color: $aprendeya_t4;
+}
+
+.list-group-item-aprendeya.list-group-item-action:hover, .list-group-item-aprendeya.list-group-item-action:focus {
+  color: $aprendeya_t5;
+  background-color: $aprendeya_t3;
+}
+
+.list-group-item-aprendeya.list-group-item-action.active {
+  color: $aprendeya_text_color_dark_bright;
+  background-color: $aprendeya_t5;
+  border-color: $aprendeya_t5;
+}
+
+.table-aprendeya,
+.table-aprendeya > th,
+.table-aprendeya > td {
+  background-color: $aprendeya_t4;
+}
+
+.table-hover .table-aprendeya:hover {
+  background-color: $aprendeya_t3;
+}
+
+.table-hover .table-aprendeya:hover > td,
+.table-hover .table-aprendeya:hover > th {
+  background-color: $aprendeya_t3;
+}
+
+.text-aprendeya {
+  color: $aprendeya_t1 !important;
+}
+
+a.text-aprendeya:hover, a.text-aprendeya:focus {
+  color: $aprendeya_t2 !important;
+}
